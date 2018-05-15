@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>split landing page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <div class="container">
+  <div class="split left">
+    <h1>The Designer</h1>
+    <a href="#" class="button">Read More</a>
+  </div>
+  <div class="split right">
+    <h1>The Programmer</h1>
+    <a href="#" class="button">Read More</a>
+  </div>
+</div>
+
+
+  <script type="text/javascript">
+  const left=document.querySelector('.left');
+  const right=document.querySelector('.right');
+  const container=document.querySelector('.container');
+  left.addEventListener('mouseenter',()=>{
+    container.classList.add('hover-left')
+  })
+   left.addEventListener('mouseleave',()=>{
+    container.classList.remove('hover-left')
+  })
+    right.addEventListener('mouseenter',()=>{
+    container.classList.add('hover-right')
+  })
+   right.addEventListener('mouseleave',()=>{
+    container.classList.remove('hover-right')
+  })
+  </script>
+</body>
+</html>
