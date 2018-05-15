@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>document</title>
+   <style type="text/css">
+   body{
+      margin: 20px;
+      padding:0;
+   }
+   .container{
+      max-width: 760px;
+      margin:auto;
+   }
+   .main-img img,.imgs img{
+   width: 100%;
+   }
+   .imgs{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 5px;
+      cursor: pointer;
+   }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="main-img">
+         <img src="img/1.jpg" id="current">
+      </div>
+      <div class="imgs">
+         <img src="img/1.jpg"/>
+         <img src="img/2.jpg"/>
+         <img src="img/3.jpg"/>
+         <img src="img/4.jpg"/>
+         <img src="img/5.jpg"/>
+      </div>
+   </div>
+
+
+   <script>
+      const opacity=0.4;
+      let current=document.querySelector('#current');
+      let imgs=document.querySelectorAll('.imgs');
+      imgs.forEach(img=>img.addEventListener('click',changeImg));
+
+        function changeImg(e){
+         //reset the opacity
+         imgs.forEach(img=>(img.style.opacity=1));
+            e.target.style.opacity=opacity;
+         }
+   </script>
+</body>
+</html>
