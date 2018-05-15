@@ -1,0 +1,20 @@
+<script>
+var index=0;
+const time=2000;
+var string=['speaker','Teacher','UI Designer','web developer'];
+function changeText() {
+   const dd=document.getElementById('root');
+   dd.setAttribute("style", "color:red; background: green; width:120px; padding:10px; text-align:center; border: 1px solid red; font-size:20px");
+   dd.innerHTML=string[index];
+   if(index< string.length-1){
+      index++
+   }else{
+      index=0;
+   }
+   setTimeout("changeText()",time)
+}
+window.onload=changeText;
+</script>
+
+
+<div id="root"></div>
