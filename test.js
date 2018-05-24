@@ -51,5 +51,36 @@ function capitalizeLetters(str) {
       .map(word => word[0].toUpperCase() + word.substring(1))
       .join(' ');
 }
-const output = capitalizeLetters('i love javascript');
+function maxChar(str) {
+   const charmap = {};
+   let maxno = 0;
+   let maxChar = '';
+   str.split('').forEach(char => {
+      if (charmap[char]) {
+         charmap[char]++;
+      } else {
+         charmap[char] = 1;
+      }
+   });
+   for (let char in charmap) {
+      if (charmap[char] > maxno) {
+         maxno = charmap[char];
+         maxChar = char;
+      }
+      return maxChar;
+   }
+   console.log(charmap);
+}
+function fizzBuzz() {
+   for (let i = 0; i <= 100; i++) {
+      if (i % 15 === 0) {
+         console.log('fizzBuzz');
+      } else if (i % 3 == 0) {
+         console.log('fizz');
+      } else if (i % 5 === 0) {
+         console.log('buzz');
+      }
+   }
+}
+const output = fizzBuzz();
 console.log(output);
