@@ -23,6 +23,20 @@ function reveserString(str) {
    // using high order reduce function
    return str.split('').reduce((revStr, char) => char + revStr, '');
 }
-
-const txt = reveserString('hello');
-console.log(txt);
+function isPalindrom(str) {
+   const revStr = str
+      .split('')
+      .reverse()
+      .join('');
+   return revStr === str;
+}
+function reverseInt(int) {
+   const revInt = int
+      .toString()
+      .split('')
+      .reverse()
+      .join('');
+   return parseInt(revInt) * Math.sign(int);
+}
+const output = reverseInt(-12345);
+console.log(output);
