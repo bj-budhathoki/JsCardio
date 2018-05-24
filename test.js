@@ -1,7 +1,9 @@
-const text = 'hello';
-//1.reserse  string
-const txt = 'hello';
-const st = txt.split('');
-const resverStr = st.reverse().join('');
-
-console.log(resverStr);
+//reverse the string
+function reveserString(str) {
+   return str
+      .split('')
+      .reverse()
+      .join(' ');
+}
+const txt = reveserString('hello');
+console.log(txt);
