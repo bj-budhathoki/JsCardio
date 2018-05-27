@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>comming soon landing page</title>
+    <link rel="stylesheet" type="text/css" href="landing.css">
+</head>
+
+<body>
+    <section class="landing-page">
+        <div class="landing-inner">
+            <img src="img/logo.png" alt="comming soon" />
+            <p>A social network for the developer</p>
+            <h1 class="commingsoon">comming soon</h1>
+            <div class="countdown"></div>
+        </div>
+    </section>
+
+
+    <script>
+        const countdown=document.querySelector('.countdown');
+        //set the lunch date
+        const lunchDate=new Date('Jan,1,2019 12:00:00').getTime();
+        const intvl=setInterval(()=>{
+            const now= new Date().getTime();
+            const distance= lunchDate-now;
+            const days=Math.floor(distance/(1000*60*60*24));
+            const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            const mins=Math.floor((distance%(1000*60*60))/(1000*60));
+            const seconds=Math.floor((distance%(1000*60))/1000);
+            //display
+            countdown.innerHTML=`
+            <div>${days} <span>days</span></div>
+            <div>${hours} <span>hours</span></div>
+            <div>${mins} <span>mins</span></div>
+            <div>${seconds} <span>seconds</span></div>
+            `;
+            if(distance<0){
+                clearInterval(intvl);
+                countdown.style.color='#17a2b8';
+            }
+        },1000)
+    </script>
+</body>
+
+</html>

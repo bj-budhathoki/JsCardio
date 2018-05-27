@@ -29,3 +29,8 @@ const companies = [
    { name: 'company seven', category: 'Finance', start: 1990, end: 2017 }
 ];
 const ages = [33, 12, 20, 16, 554, 21, 44, 62, 13, 54, 25, 64, 32];
+
+//forEach
+companies.forEach(company => {
+   console.log(company.name);
+});
