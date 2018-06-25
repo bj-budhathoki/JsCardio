@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <style type="text/css">
+ .circle{
+    width:200px;
+    height:200px;
+    background:red;
+    clip-path:  circle(50%);
+  }
+  .circle1{
+    width:200px;
+    height:200px;
+    background:red;
+    clip-path:  circle(70% at 70% 10%);
+  }
+  .polygon{
+
+  }
+.test{
+  background:#FFFC00;
+  width:1000px;
+  height: 400px;
+}
+@media screen and (max-width:800px){
+  .test{
+    background:#991A1A;
+  }
+}
+@media screen and (max-width: 500px) {
+  .test{
+    background:#321C1C;
+  }
+}
+</style>
+</head>
+<body>
+   <div class="circle"> circle</div>
+   <div class="test">hello</div>
+
+
+   <script type="text/javascript">
+     if(window.PaymentRequest){
+      console.log('yeah! you can go ahead');
+     }else{
+      console.log('no support');
+     }
+   </script>
+</body>
+</html>
